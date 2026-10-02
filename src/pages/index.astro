@@ -1,0 +1,117 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import AuditForm from '../components/AuditForm.astro';
+import { getCollection } from 'astro:content';
+
+const caseStudies = await getCollection('case-studies');
+const latestBlog = await getCollection('blog');
+---
+
+<MainLayout 
+  title="SEO as a Service | Scale Organic Traffic & Revenue"
+  description="Data-driven SEO agency delivering technical audits, high-authority link building, and content strategy for high-growth businesses."
+>
+  <!-- Hero Section -->
+  <section class="relative pt-20 pb-16 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-4 py-1.5 rounded-full border border-indigo-500/20 mb-6">
+        🚀 Data-Driven SEO as a Service
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
+        Dominate Search Engine Rankings with <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent">Proven SEO Engineering</span>
+      </h1>
+      <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
+        Stop losing qualified leads to competitors. We optimize your technical foundation, build high-authority links, and publish content that converts traffic into ARR.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a 
+          href="#free-audit" 
+          class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 transition hover:scale-105"
+        >
+          Claim Free Technical Audit →
+        </a>
+        <a 
+          href="/case-studies" 
+          class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl transition"
+        >
+          View Case Studies
+        </a>
+      </div>
+
+      <!-- Trust Metrics -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-900">
+        <div>
+          <div class="text-3xl font-extrabold text-white">+340%</div>
+          <div class="text-xs text-slate-400 mt-1">Avg. Traffic Increase</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-indigo-400">100/100</div>
+          <div class="text-xs text-slate-400 mt-1">Core Web Vitals Target</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-white">1,500+</div>
+          <div class="text-xs text-slate-400 mt-1">Page 1 Keywords Ranked</div>
+        </div>
+        <div>
+          <div class="text-3xl font-extrabold text-emerald-400">98%</div>
+          <div class="text-xs text-slate-400 mt-1">Client Retention Rate</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-20 bg-slate-900/50 border-y border-slate-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+        <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">
+          Complete SEO Services Tailored for Growth
+        </h2>
+        <p class="text-slate-400 text-sm">
+          Everything your site needs to rank higher, index faster, and convert visitors.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Service 1 -->
+        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold">
+            🛠️
+          </div>
+          <h3 class="text-xl font-bold text-white">Technical SEO & Audits</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Eliminate indexation errors, resolve crawl budget waste, and optimize Core Web Vitals for lightning-fast speeds.
+          </p>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold">
+            ✍️
+          </div>
+          <h3 class="text-xl font-bold text-white">Content Strategy & On-Page</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Target high-converting buyer intent keywords with SEO-optimized articles, landing pages, and schema metadata.
+          </p>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-indigo-500/50 transition">
+          <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold">
+            🔗
+          </div>
+          <h3 class="text-xl font-bold text-white">High-Authority Link Building</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Acquire white-hat backlinks from domain-reputable publications in your industry to build domain authority.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lead Form Section -->
+  <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <AuditForm />
+  </section>
+</MainLayout>

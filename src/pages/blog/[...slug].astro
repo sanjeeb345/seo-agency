@@ -1,0 +1,42 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: post,
+  }));
+}
+
+const post = Astro.props;
+const { Content } = await render(post);
+---
+
+<MainLayout title={post.data.title} description={post.data.description}>
+  <article class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div class="space-y-4 text-center border-b border-slate-800 pb-8">
+      <div class="flex items-center justify-center gap-2 text-xs text-indigo-400">
+        {post.data.tags.map((tag) => (
+          <span class="bg-indigo-500/10 border border-indigo-500/20 px-2.5 py-0.5 rounded-full">
+            #{tag}
+          </span>
+        ))}
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+        {post.data.title}
+      </h1>
+      <div class="flex items-center justify-center gap-4 text-xs text-slate-400">
+        <span>Written by <strong class="text-slate-200">{post.data.author}</strong></span>
+        <span>&bull;</span>
+        <time>{post.data.pubDate.toISOString().slice(0, 10)}</time>
+      </div>
+    </div>
+
+    <!-- Article Content -->
+    <div class="prose prose-invert prose-indigo max-w-none text-slate-300 text-sm leading-relaxed space-y-6">
+      <Content />
+    </div>
+  </article>
+</MainLayout>

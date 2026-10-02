@@ -1,0 +1,44 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { getCollection } from 'astro:content';
+
+const caseStudies = await getCollection('case-studies');
+---
+
+<MainLayout 
+  title="SEO Case Studies & Client Results"
+  description="Proven results: Explore how our data-driven SEO strategy grew traffic and revenue for our clients."
+>
+  <div class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+      <h1 class="text-4xl font-extrabold text-white sm:text-5xl">Proven SEO Results</h1>
+      <p class="text-slate-400 text-lg">
+        Real case studies showing how we help companies outrank competitors and drive organic growth.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {caseStudies.map((cs) => (
+        <div class="bg-slate-900/50 border border-slate-800 rounded-2xl p-8 space-y-6 hover:border-indigo-500/50 transition flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs text-slate-400">
+              <span>{cs.data.industry}</span>
+              <span class="font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">{cs.data.metric}</span>
+            </div>
+            <h2 class="text-2xl font-bold text-white">
+              <a href={`/case-studies/${cs.id}`} class="hover:text-indigo-400 transition">
+                {cs.data.client}
+              </a>
+            </h2>
+            <p class="text-xs text-slate-400 leading-relaxed">
+              {cs.data.description}
+            </p>
+          </div>
+          <a href={`/case-studies/${cs.id}`} class="inline-block text-xs font-semibold text-indigo-400 hover:text-indigo-300">
+            Read Case Study →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</MainLayout>

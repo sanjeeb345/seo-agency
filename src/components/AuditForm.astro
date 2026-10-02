@@ -1,0 +1,70 @@
+---
+---
+
+<div id="free-audit" class="bg-gradient-to-br from-indigo-950/50 via-slate-900 to-slate-950 border border-indigo-500/20 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
+  <!-- Glowing background effect -->
+  <div class="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-xl mx-auto text-center space-y-3 mb-8">
+    <span class="inline-block text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+      Zero Cost &bull; No Credit Card Required
+    </span>
+    <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
+      Get a Free Technical <span class="text-indigo-400">SEO Audit</span>
+    </h2>
+    <p class="text-slate-400 text-sm">
+      Enter your website URL and we'll analyze your technical SEO, page speed, and keyword gaps within 24 hours.
+    </p>
+  </div>
+
+  <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto space-y-4">
+    <!-- Web3Forms Access Key (User can replace with their key) -->
+    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+    <input type="hidden" name="subject" value="New SEO Audit Request" />
+
+    <div>
+      <label for="url" class="block text-xs font-medium text-slate-300 mb-1">Website URL *</label>
+      <input 
+        type="url" 
+        id="url" 
+        name="url" 
+        required 
+        placeholder="https://yourwebsite.com" 
+        class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="email" class="block text-xs font-medium text-slate-300 mb-1">Work Email Address *</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        required 
+        placeholder="you@company.com" 
+        class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
+      />
+    </div>
+
+    <div>
+      <label for="goal" class="block text-xs font-medium text-slate-300 mb-1">Primary Goal (Optional)</label>
+      <select 
+        id="goal" 
+        name="goal" 
+        class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
+      >
+        <option value="Fix Technical Errors">Fix Technical Errors & Speed</option>
+        <option value="Increase Organic Traffic">Increase Organic Traffic</option>
+        <option value="Rank #1 for Keywords">Rank #1 for Targeted Keywords</option>
+        <option value="Full SEO Overhaul">Full SEO Overhaul</option>
+      </select>
+    </div>
+
+    <button 
+      type="submit" 
+      class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-indigo-600/30 transition hover:scale-[1.02] active:scale-[0.98]"
+    >
+      Request Free Audit →
+    </button>
+  </form>
+</div>

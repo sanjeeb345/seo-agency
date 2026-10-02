@@ -1,0 +1,34 @@
+---
+import { getCollection, render } from 'astro:content';
+import MainLayout from '../../layouts/MainLayout.astro';
+
+export async function getStaticPaths() {
+  const caseStudies = await getCollection('case-studies');
+  return caseStudies.map((cs) => ({
+    params: { slug: cs.id },
+    props: cs,
+  }));
+}
+
+const cs = Astro.props;
+const { Content } = await render(cs);
+---
+
+<MainLayout title={`${cs.data.client} - Case Study`} description={cs.data.description}>
+  <article class="py-16 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+    <div class="space-y-4 text-center border-b border-slate-800 pb-8">
+      <span class="inline-block text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+        {cs.data.metric}
+      </span>
+      <h1 class="text-3xl sm:text-5xl font-extrabold text-white leading-tight">
+        {cs.data.client}
+      </h1>
+      <p class="text-slate-400 text-sm">{cs.data.industry}</p>
+    </div>
+
+    <!-- Case Study Content -->
+    <div class="prose prose-invert prose-indigo max-w-none text-slate-300 text-sm leading-relaxed space-y-6">
+      <Content />
+    </div>
+  </article>
+</MainLayout>

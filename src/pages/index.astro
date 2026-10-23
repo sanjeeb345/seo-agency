@@ -8,110 +8,323 @@ const latestBlog = await getCollection('blog');
 ---
 
 <MainLayout 
-  title="SEO as a Service | Scale Organic Traffic & Revenue"
-  description="Data-driven SEO agency delivering technical audits, high-authority link building, and content strategy for high-growth businesses."
+  title="askaseo | High-Performance SEO Engineering & Search Growth"
+  description="Data-driven SEO agency delivering precision technical audits, topical authority engineering, and high-impact organic revenue."
 >
   <!-- Hero Section -->
-  <section class="relative pt-20 pb-16 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-4 py-1.5 rounded-full border border-indigo-500/20 mb-6">
-        🚀 Data-Driven SEO as a Service
-      </span>
-      <h1 class="text-4xl sm:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
-        Dominate Search Engine Rankings with <span class="bg-gradient-to-r from-indigo-400 via-purple-400 to-emerald-400 bg-clip-text text-transparent">Proven SEO Engineering</span>
+  <section class="relative pt-24 pb-20 md:pt-32 md:pb-28 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      
+      <!-- Top Announcement Pill -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/[0.04] border border-white/[0.08] backdrop-blur-md mb-8 hover:border-indigo-500/40 transition-all cursor-default shadow-lg shadow-black/40">
+        <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-ping"></span>
+        <span class="text-xs font-semibold tracking-wide text-slate-300">
+          Accepting Q4 Growth Clients &bull; <span class="text-cyan-400 font-bold">Free 30-Point Audit</span>
+        </span>
+      </div>
+
+      <!-- Main Headline -->
+      <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight max-w-5xl mx-auto leading-[1.08]">
+        We Turn Search Engines Into Your <br class="hidden sm:inline" />
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-200 to-cyan-400">
+          Most Predictable Growth Engine
+        </span>
       </h1>
-      <p class="mt-6 text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-        Stop losing qualified leads to competitors. We optimize your technical foundation, build high-authority links, and publish content that converts traffic into ARR.
+
+      <!-- Subtitle -->
+      <p class="mt-6 text-base sm:text-xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed font-normal">
+        Stop losing high-intent buyers to competitors. <strong class="text-white font-semibold">askaseo</strong> eliminates critical crawl bottlenecks, engineers topical authority, and ranks your pages #1 on Google.
       </p>
 
-      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- Action Buttons -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto sm:max-w-none">
         <a 
           href="#free-audit" 
-          class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-500 text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 transition hover:scale-105"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-xl font-bold text-sm text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 shadow-xl shadow-indigo-500/30 hover:shadow-indigo-500/50 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20"
         >
-          Claim Free Technical Audit →
+          <span>Claim Free Technical Audit</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
         </a>
+
         <a 
           href="/case-studies" 
-          class="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl transition"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-sm text-slate-300 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.1] transition-all duration-200"
         >
-          View Case Studies
+          <span>View Proven Case Studies</span>
+          <span class="text-xs text-indigo-400 font-bold bg-indigo-500/10 px-2 py-0.5 rounded-md border border-indigo-500/20">+340%</span>
         </a>
       </div>
 
-      <!-- Trust Metrics -->
-      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-900">
-        <div>
-          <div class="text-3xl font-extrabold text-white">+340%</div>
-          <div class="text-xs text-slate-400 mt-1">Avg. Traffic Increase</div>
+      <!-- Trust Metrics Bar -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 pt-10 border-t border-white/[0.08] max-w-5xl mx-auto">
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-3xl sm:text-4xl font-black text-white tracking-tight">+340%</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Avg. Organic Traffic Lift</div>
         </div>
-        <div>
-          <div class="text-3xl font-extrabold text-indigo-400">100/100</div>
-          <div class="text-xs text-slate-400 mt-1">Core Web Vitals Target</div>
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-3xl sm:text-4xl font-black text-cyan-400 tracking-tight">100/100</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Core Web Vitals Target</div>
         </div>
-        <div>
-          <div class="text-3xl font-extrabold text-white">1,500+</div>
-          <div class="text-xs text-slate-400 mt-1">Page 1 Keywords Ranked</div>
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-3xl sm:text-4xl font-black text-white tracking-tight">1,500+</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Top 3 Keywords Ranked</div>
         </div>
-        <div>
-          <div class="text-3xl font-extrabold text-emerald-400">98%</div>
-          <div class="text-xs text-slate-400 mt-1">Client Retention Rate</div>
+        <div class="p-4 rounded-2xl bg-white/[0.02] border border-white/[0.05]">
+          <div class="text-3xl sm:text-4xl font-black text-emerald-400 tracking-tight">98%</div>
+          <div class="text-xs font-medium text-slate-400 mt-1">Client Retention Rate</div>
         </div>
+      </div>
+
+      <!-- High-End Interactive Live Performance Dashboard Card -->
+      <div class="mt-16 max-w-4xl mx-auto rounded-3xl p-1 bg-gradient-to-b from-indigo-500/30 via-white/[0.08] to-transparent shadow-2xl">
+        <div class="rounded-[23px] bg-[#090d16]/95 backdrop-blur-2xl border border-white/[0.08] p-5 sm:p-8 text-left space-y-6">
+          
+          <!-- Mockup Window Header -->
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-white/[0.06]">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-rose-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+              <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+              <span class="ml-2 text-xs font-mono text-slate-400">askaseo-intelligence-v2.6.4</span>
+            </div>
+            <div class="flex items-center gap-2 bg-[#05070c] px-3.5 py-1.5 rounded-lg border border-white/[0.08] text-xs font-mono text-slate-300">
+              <span class="text-emerald-400 font-bold">● LIVE</span>
+              <span>Domain: <strong class="text-white">askaseo.com</strong></span>
+            </div>
+          </div>
+
+          <!-- Live Metrics Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+              <div class="text-xs text-slate-400">Monthly Clicks</div>
+              <div class="text-xl font-extrabold text-white mt-1">184,200</div>
+              <div class="text-[11px] font-semibold text-emerald-400 mt-0.5">▲ +48.2% vs last mo</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+              <div class="text-xs text-slate-400">Avg. Position</div>
+              <div class="text-xl font-extrabold text-indigo-400 mt-1">#2.1</div>
+              <div class="text-[11px] font-semibold text-cyan-400 mt-0.5">Top 3 across 420 terms</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+              <div class="text-xs text-slate-400">Indexed Pages</div>
+              <div class="text-xl font-extrabold text-white mt-1">100%</div>
+              <div class="text-[11px] font-semibold text-emerald-400 mt-0.5">0 Crawl Errors</div>
+            </div>
+            <div class="p-3.5 rounded-xl bg-white/[0.02] border border-white/[0.05]">
+              <div class="text-xs text-slate-400">Speed (LCP)</div>
+              <div class="text-xl font-extrabold text-emerald-400 mt-1">0.78s</div>
+              <div class="text-[11px] font-semibold text-slate-400 mt-0.5">Passed Core Web Vitals</div>
+            </div>
+          </div>
+
+          <!-- Visual SERP Snippet Preview -->
+          <div class="p-4 rounded-xl bg-[#06080e] border border-white/[0.06] space-y-2">
+            <div class="text-[11px] font-mono text-slate-500 uppercase tracking-wider">Simulated Google Rank #1 SERP Result</div>
+            <div class="text-xs text-slate-400 flex items-center gap-1.5">
+              <span class="w-4 h-4 rounded-full bg-indigo-500/20 flex items-center justify-center text-[10px] text-indigo-400 font-bold">G</span>
+              <span>https://askaseo.com</span>
+              <span class="text-slate-600">›</span>
+              <span class="text-slate-400">services</span>
+            </div>
+            <div class="text-base font-bold text-indigo-400 hover:underline cursor-pointer">
+              askaseo — High-Growth Technical SEO & Search Engine Engineering
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              We help ambitious startups and scale-ups scale organic search pipeline. Zero keyword stuffing, zero vanity metrics. Complete Core Web Vitals optimization, semantic topical clusters, and high-DR backlink acquisition.
+            </p>
+          </div>
+
+          <!-- Bottom Status Bar -->
+          <div class="flex flex-wrap items-center justify-between text-xs text-slate-400 pt-2 border-t border-white/[0.06] gap-2">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400">✔</span>
+              <span>Audit crawler ready: scans 500+ URLs in under 3 minutes</span>
+            </div>
+            <a href="#free-audit" class="text-indigo-400 hover:text-cyan-400 font-bold flex items-center gap-1 transition">
+              Run Audit On Your Domain →
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Tooling & Standards Bar -->
+  <section class="py-10 border-y border-white/[0.06] bg-black/30 backdrop-blur-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+      <p class="text-xs font-bold uppercase tracking-widest text-slate-500">
+        Engineered with Industry-Standard Search Intelligence
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-8 sm:gap-14 text-slate-400 text-sm font-semibold tracking-wide">
+        <span class="hover:text-white transition">Google Search Console</span>
+        <span class="hover:text-white transition">Ahrefs Intelligence</span>
+        <span class="hover:text-white transition">Semrush Pro</span>
+        <span class="hover:text-white transition">Screaming Frog</span>
+        <span class="hover:text-white transition">Schema.org JSON-LD</span>
+        <span class="hover:text-white transition">Astro High-Speed SSG</span>
       </div>
     </div>
   </section>
 
-  <!-- Services Grid -->
-  <section class="py-20 bg-slate-900/50 border-y border-slate-900">
+  <!-- Core Services Grid -->
+  <section id="services" class="py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
-        <h2 class="text-3xl font-bold text-white tracking-tight sm:text-4xl">
-          Complete SEO Services Tailored for Growth
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 space-y-3">
+        <span class="text-xs font-bold uppercase tracking-widest text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+          Our Specializations
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-white tracking-tight">
+          Engineered for Revenue, Not Just Traffic
         </h2>
-        <p class="text-slate-400 text-sm">
-          Everything your site needs to rank higher, index faster, and convert visitors.
+        <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+          Search algorithms evolve constantly. We deploy battle-tested technical infrastructure and semantic architecture that withstands every core update.
         </p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Service 1 -->
-        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-indigo-500/50 transition">
-          <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold">
-            🛠️
+        
+        <!-- Service 1: Technical SEO -->
+        <div class="group relative rounded-2xl p-8 bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 group-hover:bg-indigo-500/20 transition-all">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+              Technical SEO & Crawl Diagnostics
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Eliminate render-blocking scripts, broken redirect loops, canonicalization conflicts, and index bloat. Ensure 100% of your valuable pages are crawled and indexed.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Core Web Vitals (LCP, INP, CLS)</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Advanced JSON-LD Schema Graphs</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Dynamic XML Sitemap & Robots Logic</li>
+            </ul>
           </div>
-          <h3 class="text-xl font-bold text-white">Technical SEO & Audits</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Eliminate indexation errors, resolve crawl budget waste, and optimize Core Web Vitals for lightning-fast speeds.
-          </p>
+          <div class="pt-6 mt-6 border-t border-white/[0.06]">
+            <a href="/services#technical" class="text-xs font-bold text-indigo-400 group-hover:text-cyan-400 inline-flex items-center gap-1.5 transition">
+              <span>View technical details</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Service 2 -->
-        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-indigo-500/50 transition">
-          <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold">
-            ✍️
+        <!-- Service 2: Semantic Content -->
+        <div class="group relative rounded-2xl p-8 bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 group-hover:scale-110 group-hover:bg-cyan-500/20 transition-all">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-cyan-300 transition-colors">
+              Semantic Clusters & On-Page
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Move beyond single keywords. We construct comprehensive topic clusters and internal linking networks that prove entity authority to Google's semantic models.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> High-Buyer Intent Keyword Mapping</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Content Pruning & Cannibalization Fix</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Conversion-Optimized UX Layouts</li>
+            </ul>
           </div>
-          <h3 class="text-xl font-bold text-white">Content Strategy & On-Page</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Target high-converting buyer intent keywords with SEO-optimized articles, landing pages, and schema metadata.
-          </p>
+          <div class="pt-6 mt-6 border-t border-white/[0.06]">
+            <a href="/services#onpage" class="text-xs font-bold text-cyan-400 group-hover:text-indigo-400 inline-flex items-center gap-1.5 transition">
+              <span>View content strategy</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
 
-        <!-- Service 3 -->
-        <div class="bg-slate-950 border border-slate-800 p-8 rounded-2xl space-y-4 hover:border-indigo-500/50 transition">
-          <div class="w-12 h-12 bg-indigo-500/10 rounded-xl flex items-center justify-center text-indigo-400 text-xl font-bold">
-            🔗
+        <!-- Service 3: High-Authority Link Building -->
+        <div class="group relative rounded-2xl p-8 bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/[0.08] hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 transition-all duration-300 flex flex-col justify-between">
+          <div class="space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400 group-hover:scale-110 group-hover:bg-indigo-500/20 transition-all">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-white group-hover:text-indigo-300 transition-colors">
+              High-Authority Link Engineering
+            </h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Real editorial links from genuine industry publications with proven domain rating (DR 65+). 100% white-hat manual outreach with zero automated link spam or PBNs.
+            </p>
+            <ul class="text-xs text-slate-300 space-y-2 pt-2">
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Real Tech & Industry Publications</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Anchor Text Diversification Safety</li>
+              <li class="flex items-center gap-2"><span class="text-emerald-400">✔</span> Unlinked Brand Mention Reclamation</li>
+            </ul>
           </div>
-          <h3 class="text-xl font-bold text-white">High-Authority Link Building</h3>
-          <p class="text-slate-400 text-sm leading-relaxed">
-            Acquire white-hat backlinks from domain-reputable publications in your industry to build domain authority.
-          </p>
+          <div class="pt-6 mt-6 border-t border-white/[0.06]">
+            <a href="/services#linkbuilding" class="text-xs font-bold text-indigo-400 group-hover:text-cyan-400 inline-flex items-center gap-1.5 transition">
+              <span>View link building</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- High-Converting Case Study Spotlight -->
+  <section class="py-20 bg-gradient-to-b from-[#0a0d16] to-[#07090e] border-y border-white/[0.06]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-gradient-to-br from-indigo-950/40 via-[#0a0e1a] to-[#07090e] border border-white/[0.1] p-8 sm:p-12 relative overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-7 space-y-5">
+            <span class="inline-block text-xs font-bold text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
+              Featured Case Study &bull; B2B SaaS
+            </span>
+            <h3 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight">
+              How CloudScale Grew From 12k to 240k Monthly Search Visitors in 6 Months
+            </h3>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              By resolving JavaScript rendering blocks and publishing 25 programmatic comparison pages, CloudScale increased organic pipeline value by <strong class="text-emerald-400">+$1.8M ARR</strong> without spending an extra dollar on paid ads.
+            </p>
+            <div class="flex flex-wrap gap-6 pt-2">
+              <div>
+                <div class="text-2xl font-black text-white">+1,850%</div>
+                <div class="text-xs text-slate-400">Organic Growth</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black text-cyan-400">#1 Rank</div>
+                <div class="text-xs text-slate-400">On 48 Target Terms</div>
+              </div>
+              <div>
+                <div class="text-2xl font-black text-emerald-400">0.6s LCP</div>
+                <div class="text-xs text-slate-400">Sub-second Speed</div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5 text-center lg:text-right">
+            <a 
+              href="/case-studies" 
+              class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold text-white bg-indigo-600 hover:bg-indigo-500 shadow-lg shadow-indigo-600/30 transition-all hover:scale-105"
+            >
+              <span>Read Full Breakdown</span>
+              <span>→</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Lead Form Section -->
-  <section class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section class="py-24 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
     <AuditForm />
   </section>
 </MainLayout>

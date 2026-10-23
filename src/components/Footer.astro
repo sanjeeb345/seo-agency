@@ -2,50 +2,90 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-slate-950 border-t border-slate-800 text-slate-400 py-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
-    <div class="space-y-4">
-      <div class="flex items-center gap-2 text-xl font-bold text-white">
-        <span class="p-1 bg-gradient-to-tr from-indigo-500 to-emerald-400 rounded-md text-slate-950 text-sm font-black">⚡</span>
-        Apex<span class="text-indigo-400">SEO</span>
+<footer class="bg-[#05070b] border-t border-white/[0.07] text-slate-400 pt-16 pb-12 relative overflow-hidden">
+  <!-- Ambient background glow -->
+  <div class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-96 h-96 bg-indigo-600/10 blur-[100px] pointer-events-none rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-10 lg:gap-12 pb-12 border-b border-white/[0.06]">
+      
+      <!-- Brand & Mission (Col 1 & 2) -->
+      <div class="md:col-span-2 space-y-4">
+        <a href="/" class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-indigo-600 to-cyan-400 p-[1px]">
+            <div class="w-full h-full bg-[#0a0d14] rounded-[7px] flex items-center justify-center">
+              <svg class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+              </svg>
+            </div>
+          </div>
+          <span class="text-xl font-black text-white tracking-tight">
+            aska<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">seo</span>
+          </span>
+        </a>
+        <p class="text-sm text-slate-400 leading-relaxed max-w-sm">
+          High-performance Search Engine Optimization & Technical Architecture for ambitious companies. We turn search engines into predictable ARR.
+        </p>
+        
+        <div class="flex items-center gap-3 pt-2">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/20">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            All Systems Operational
+          </span>
+          <span class="text-xs text-slate-500">Global CDN / Edge Vercel</span>
+        </div>
       </div>
-      <p class="text-sm text-slate-400 leading-relaxed">
-        Data-driven SEO as a Service. We grow organic search traffic, keyword rankings, and revenue for fast-growing businesses.
-      </p>
+
+      <!-- Services (Col 3) -->
+      <div>
+        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Core Services</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/services#technical" class="hover:text-indigo-400 transition-colors">Technical SEO Audits</a></li>
+          <li><a href="/services#onpage" class="hover:text-indigo-400 transition-colors">Semantic Content Strategy</a></li>
+          <li><a href="/services#linkbuilding" class="hover:text-indigo-400 transition-colors">High-Authority Backlinks</a></li>
+          <li><a href="/services#local" class="hover:text-indigo-400 transition-colors">Core Web Vitals & Speed</a></li>
+        </ul>
+      </div>
+
+      <!-- Company (Col 4) -->
+      <div>
+        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Agency</h4>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="/case-studies" class="hover:text-indigo-400 transition-colors">Case Studies & ROI</a></li>
+          <li><a href="/pricing" class="hover:text-indigo-400 transition-colors">Transparent Pricing</a></li>
+          <li><a href="/blog" class="hover:text-indigo-400 transition-colors">Search Insights & Guides</a></li>
+          <li><a href="/contact" class="hover:text-indigo-400 transition-colors">Schedule Discovery Call</a></li>
+        </ul>
+      </div>
+
+      <!-- Free Resource & Newsletter (Col 5) -->
+      <div>
+        <h4 class="text-white font-bold text-xs uppercase tracking-wider mb-4">Free Audit</h4>
+        <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+          Request a diagnostic breakdown of your website's crawlability and speed bottlenecks.
+        </p>
+        <a 
+          href="/#free-audit" 
+          class="inline-flex items-center gap-1.5 text-xs font-bold text-indigo-300 bg-indigo-500/10 hover:bg-indigo-500/20 border border-indigo-500/20 px-3.5 py-2 rounded-xl transition-all"
+        >
+          <span>Claim Audit Report</span>
+          <span>→</span>
+        </a>
+      </div>
     </div>
 
-    <div>
-      <h4 class="text-white font-semibold text-sm mb-4">Services</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/services#technical" class="hover:text-indigo-400 transition">Technical SEO Audit</a></li>
-        <li><a href="/services#onpage" class="hover:text-indigo-400 transition">On-Page Optimization</a></li>
-        <li><a href="/services#linkbuilding" class="hover:text-indigo-400 transition">High-Authority Link Building</a></li>
-        <li><a href="/services#local" class="hover:text-indigo-400 transition">Local SEO & GBP</a></li>
-      </ul>
+    <!-- Bottom Bar -->
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+      <div>
+        &copy; {currentYear} <strong class="text-slate-400 font-semibold">askaseo</strong>. All rights reserved. Registered domain at <a href="https://askaseo.com" class="text-indigo-400 hover:underline">askaseo.com</a>.
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="/services" class="hover:text-slate-400 transition">Services</a>
+        <a href="/pricing" class="hover:text-slate-400 transition">Pricing</a>
+        <a href="/contact" class="hover:text-slate-400 transition">Contact</a>
+        <a href="https://askaseo.com/sitemap-index.xml" class="hover:text-slate-400 transition">Sitemap</a>
+      </div>
     </div>
-
-    <div>
-      <h4 class="text-white font-semibold text-sm mb-4">Company</h4>
-      <ul class="space-y-2 text-sm">
-        <li><a href="/case-studies" class="hover:text-indigo-400 transition">Case Studies</a></li>
-        <li><a href="/pricing" class="hover:text-indigo-400 transition">Pricing Plans</a></li>
-        <li><a href="/blog" class="hover:text-indigo-400 transition">SEO Blog</a></li>
-        <li><a href="/contact" class="hover:text-indigo-400 transition">Get in Touch</a></li>
-      </ul>
-    </div>
-
-    <div>
-      <h4 class="text-white font-semibold text-sm mb-4">Free Resource</h4>
-      <p class="text-sm text-slate-400 mb-4">
-        Get a comprehensive 30-point technical SEO audit delivered straight to your inbox.
-      </p>
-      <a href="/#free-audit" class="inline-block text-xs font-semibold text-indigo-400 bg-indigo-500/10 border border-indigo-500/20 px-3 py-2 rounded-lg hover:bg-indigo-500/20 transition">
-        Claim Free Audit →
-      </a>
-    </div>
-  </div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-slate-900 text-xs text-center text-slate-500">
-    &copy; {currentYear} ApexSEO. All rights reserved. Built with Astro & Cloudflare/Vercel.
   </div>
 </footer>

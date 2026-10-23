@@ -7,7 +7,7 @@ const blogCollection = defineCollection({
     title: z.string(),
     description: z.string(),
     pubDate: z.date(),
-    author: z.string().default('ApexSEO Team'),
+    author: z.string().default('askaseo Team'),
     image: z.string().optional(),
     tags: z.array(z.string()).default([]),
   }),

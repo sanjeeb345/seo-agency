@@ -20,9 +20,24 @@ const { title, description, image, canonicalURL } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    
     <SEO title={title} description={description} image={image} canonicalURL={canonicalURL} />
   </head>
-  <body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+  <body class="bg-[#07090e] text-slate-100 min-h-screen flex flex-col font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-indigo-500 selection:text-white relative overflow-x-hidden">
+    <!-- Ambient background mesh glow -->
+    <div class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+      <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-indigo-600/15 via-purple-600/10 to-transparent blur-[120px] rounded-full"></div>
+      <div class="absolute top-[800px] -left-40 w-[600px] h-[600px] bg-cyan-500/10 blur-[130px] rounded-full"></div>
+      <div class="absolute top-[1600px] -right-40 w-[600px] h-[600px] bg-indigo-500/10 blur-[130px] rounded-full"></div>
+      <!-- Subtle dot grid pattern -->
+      <div class="absolute inset-0 bg-[radial-gradient(#ffffff0a_1px,transparent_1px)] [background-size:24px_24px] opacity-70"></div>
+    </div>
+
     <Header />
     <main class="flex-grow">
       <slot />

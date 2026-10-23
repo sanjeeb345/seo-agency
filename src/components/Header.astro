@@ -1,43 +1,182 @@
 ---
 const navLinks = [
-  { name: 'Services', href: '/services' },
-  { name: 'Case Studies', href: '/case-studies' },
-  { name: 'Pricing', href: '/pricing' },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
+  { name: 'Services', href: '/services', icon: 'M13 10V3L4 14h7v7l9-11h-7z' },
+  { name: 'Case Studies', href: '/case-studies', icon: 'M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z' },
+  { name: 'Pricing', href: '/pricing', icon: 'M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
+  { name: 'Blog', href: '/blog', icon: 'M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z' },
+  { name: 'Contact', href: '/contact', icon: 'M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z' },
 ];
 ---
 
-<header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-    <!-- Brand Logo -->
-    <a href="/" class="flex items-center gap-2 text-xl font-bold text-white tracking-tight">
-      <span class="p-1.5 bg-gradient-to-tr from-indigo-500 to-emerald-400 rounded-lg text-slate-950 font-black">
-        ⚡
-      </span>
-      <span>Apex<span class="text-indigo-400">SEO</span></span>
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-[#07090e]/85 border-b border-white/[0.07] transition-all duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+    <!-- Brand Logo: askaseo -->
+    <a href="/" class="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400 rounded-xl">
+      <!-- High-tech Logo Icon -->
+      <div class="relative w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-indigo-500 to-cyan-400 p-[1px] shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all duration-300 group-hover:scale-105">
+        <div class="w-full h-full bg-[#0a0d14] rounded-[11px] flex items-center justify-center">
+          <!-- Stylized Search + Growth Icon -->
+          <svg class="w-5 h-5 text-indigo-400 group-hover:text-cyan-300 transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="M21 21l-4.35-4.35"></path>
+            <path d="M11 8v6"></path>
+            <path d="M8 11h6"></path>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Wordmark -->
+      <div class="flex flex-col">
+        <span class="text-2xl font-black tracking-tight text-white flex items-center">
+          aska<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-cyan-400">seo</span>
+        </span>
+        <span class="text-[10px] uppercase font-bold tracking-widest text-slate-400 -mt-1 flex items-center gap-1.5">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+          Search Agency
+        </span>
+      </div>
     </a>
 
-    <!-- Nav Links -->
-    <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-1 bg-white/[0.03] border border-white/[0.06] p-1.5 rounded-full backdrop-blur-md">
       {navLinks.map((link) => (
         <a 
           href={link.href} 
-          class="hover:text-indigo-400 transition-colors"
+          class="text-slate-300 hover:text-white hover:bg-white/[0.08] px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all duration-200"
         >
           {link.name}
         </a>
       ))}
     </nav>
 
-    <!-- CTA Button -->
-    <div class="flex items-center gap-4">
+    <!-- Desktop CTA Button -->
+    <div class="hidden md:flex items-center gap-3">
       <a 
         href="/#free-audit" 
-        class="bg-gradient-to-r from-indigo-500 to-indigo-600 hover:from-indigo-600 hover:to-indigo-700 text-white font-semibold text-sm px-4 py-2 rounded-xl shadow-lg shadow-indigo-500/20 transition-all hover:scale-105"
+        class="relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20"
       >
-        Free SEO Audit
+        <span>Free SEO Audit</span>
+        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
       </a>
+    </div>
+
+    <!-- Mobile Hamburger & Actions -->
+    <div class="flex items-center gap-2 md:hidden">
+      <!-- Quick Audit Pill on Mobile -->
+      <a 
+        href="/#free-audit" 
+        class="text-[11px] font-bold text-white bg-indigo-600/90 hover:bg-indigo-500 px-3 py-1.5 rounded-lg shadow-sm border border-indigo-400/30"
+      >
+        Free Audit
+      </a>
+
+      <!-- Hamburger Menu Toggle Button -->
+      <button 
+        type="button" 
+        id="mobile-menu-btn"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        class="p-2.5 rounded-xl bg-white/[0.05] border border-white/[0.1] text-slate-300 hover:text-white hover:bg-white/[0.1] focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+      >
+        <!-- Icon: Hamburger (3 bars) -->
+        <svg id="hamburger-icon" class="w-5 h-5 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <!-- Icon: Close (X) -->
+        <svg id="close-icon" class="w-5 h-5 hidden transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Menu -->
+  <div 
+    id="mobile-menu" 
+    class="hidden md:hidden border-b border-white/[0.08] bg-[#07090e]/98 backdrop-blur-2xl transition-all duration-300"
+  >
+    <div class="px-4 pt-3 pb-6 space-y-2">
+      {navLinks.map((link) => (
+        <a 
+          href={link.href} 
+          class="mobile-nav-link flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-semibold text-slate-200 hover:text-white hover:bg-white/[0.06] border border-transparent hover:border-white/[0.05] transition-all"
+        >
+          <div class="w-8 h-8 rounded-lg bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d={link.icon}></path>
+            </svg>
+          </div>
+          <span>{link.name}</span>
+        </a>
+      ))}
+
+      <!-- Mobile Menu CTA -->
+      <div class="pt-4 mt-2 border-t border-white/[0.06] space-y-3">
+        <a 
+          href="/#free-audit" 
+          class="mobile-nav-link w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl text-sm font-bold text-white bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 shadow-lg shadow-indigo-500/30 border border-white/20"
+        >
+          <span>Claim 30-Point Audit</span>
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <div class="text-center text-xs text-slate-400 pt-1">
+          Direct inquiries: <a href="mailto:hello@askaseo.com" class="text-indigo-400 hover:underline">hello@askaseo.com</a>
+        </div>
+      </div>
     </div>
   </div>
 </header>
+
+<script>
+  // Mobile Hamburger Toggle Logic
+  const toggleBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-nav-link');
+
+  function toggleMenu() {
+    if (!mobileMenu || !toggleBtn || !hamburgerIcon || !closeIcon) return;
+    const isHidden = mobileMenu.classList.contains('hidden');
+    
+    if (isHidden) {
+      mobileMenu.classList.remove('hidden');
+      hamburgerIcon.classList.add('hidden');
+      closeIcon.classList.remove('hidden');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      mobileMenu.classList.add('hidden');
+      hamburgerIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  toggleBtn?.addEventListener('click', toggleMenu);
+
+  // Close menu when a link is clicked
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        toggleMenu();
+      }
+    });
+  });
+
+  // Close menu on pressing Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
+      toggleMenu();
+    }
+  });
+</script>

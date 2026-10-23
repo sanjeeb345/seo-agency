@@ -1,70 +1,146 @@
 ---
 ---
 
-<div id="free-audit" class="bg-gradient-to-br from-indigo-950/50 via-slate-900 to-slate-950 border border-indigo-500/20 rounded-2xl p-8 shadow-2xl relative overflow-hidden">
-  <!-- Glowing background effect -->
-  <div class="absolute -right-20 -top-20 w-64 h-64 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none"></div>
+<div id="free-audit" class="relative rounded-3xl p-8 sm:p-12 backdrop-blur-2xl bg-gradient-to-br from-[#0c101c]/90 via-[#090d16]/95 to-[#07090e] border border-white/[0.1] shadow-2xl overflow-hidden">
+  <!-- Ambient background glow elements -->
+  <div class="absolute -right-20 -top-20 w-80 h-80 bg-indigo-500/15 rounded-full blur-[100px] pointer-events-none"></div>
+  <div class="absolute -left-20 -bottom-20 w-80 h-80 bg-cyan-500/10 rounded-full blur-[100px] pointer-events-none"></div>
 
-  <div class="max-w-xl mx-auto text-center space-y-3 mb-8">
-    <span class="inline-block text-xs font-semibold uppercase tracking-wider text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full border border-indigo-500/20">
-      Zero Cost &bull; No Credit Card Required
-    </span>
-    <h2 class="text-3xl font-extrabold text-white tracking-tight sm:text-4xl">
-      Get a Free Technical <span class="text-indigo-400">SEO Audit</span>
-    </h2>
-    <p class="text-slate-400 text-sm">
-      Enter your website URL and we'll analyze your technical SEO, page speed, and keyword gaps within 24 hours.
-    </p>
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center relative z-10">
+    <!-- Left Column: Value Prop & Inclusions -->
+    <div class="lg:col-span-6 space-y-6">
+      <div class="inline-flex items-center gap-2 text-xs font-bold text-cyan-400 bg-cyan-500/10 px-3.5 py-1.5 rounded-full border border-cyan-500/20">
+        <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+        Zero Cost &bull; Delivered in 24 Hours
+      </div>
+
+      <h2 class="text-3xl sm:text-4xl font-black text-white tracking-tight leading-tight">
+        Claim Your Free 30-Point <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-indigo-300 to-cyan-400">Technical SEO Audit</span>
+      </h2>
+
+      <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+        We scan your domain with proprietary crawlers to uncover hidden indexation bugs, page speed bottlenecks, and high-value keyword opportunities your competitors are winning.
+      </p>
+
+      <!-- Checklist of Deliverables -->
+      <div class="space-y-3 pt-2">
+        <div class="flex items-start gap-3">
+          <div class="w-5 h-5 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xs shrink-0 mt-0.5">
+            ✓
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            <strong class="text-white">Core Web Vitals & Crawl Budget:</strong> Diagnose slow LCP, INP, and unindexed URLs.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-5 h-5 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xs shrink-0 mt-0.5">
+            ✓
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            <strong class="text-white">Competitor Keyword Gap:</strong> Discover easy-win keywords driving revenue in your niche.
+          </p>
+        </div>
+
+        <div class="flex items-start gap-3">
+          <div class="w-5 h-5 rounded-full bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xs shrink-0 mt-0.5">
+            ✓
+          </div>
+          <p class="text-xs sm:text-sm text-slate-300">
+            <strong class="text-white">Actionable 1-Page Roadmap:</strong> High-priority fixes organized by revenue impact.
+          </p>
+        </div>
+      </div>
+
+      <!-- Social Proof Badge -->
+      <div class="pt-4 border-t border-white/[0.08] flex items-center gap-3">
+        <div class="flex -space-x-2">
+          <div class="w-8 h-8 rounded-full bg-indigo-600 border-2 border-[#090d16] flex items-center justify-center text-[10px] font-bold text-white">SC</div>
+          <div class="w-8 h-8 rounded-full bg-cyan-600 border-2 border-[#090d16] flex items-center justify-center text-[10px] font-bold text-white">MR</div>
+          <div class="w-8 h-8 rounded-full bg-purple-600 border-2 border-[#090d16] flex items-center justify-center text-[10px] font-bold text-white">AK</div>
+        </div>
+        <div class="text-xs text-slate-400">
+          <div class="flex text-amber-400 text-xs">★★★★★</div>
+          <span>Trusted by 140+ tech companies & creators</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: High-End Form -->
+    <div class="lg:col-span-6">
+      <div class="bg-[#05070c]/90 rounded-2xl p-6 sm:p-8 border border-white/[0.08] shadow-inner space-y-5">
+        <div class="border-b border-white/[0.06] pb-3">
+          <h3 class="text-lg font-bold text-white">Where should we send your audit?</h3>
+          <p class="text-xs text-slate-400">No credit card or sales call required.</p>
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
+          <input type="hidden" name="subject" value="New askaseo Audit Request" />
+
+          <div>
+            <label for="url" class="block text-xs font-semibold text-slate-300 mb-1.5">
+              Website URL <span class="text-cyan-400">*</span>
+            </label>
+            <div class="relative">
+              <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-500 text-xs">
+                https://
+              </span>
+              <input 
+                type="text" 
+                id="url" 
+                name="url" 
+                required 
+                placeholder="yourdomain.com" 
+                class="w-full bg-[#0d121f] border border-white/[0.1] rounded-xl pl-18 pr-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label for="email" class="block text-xs font-semibold text-slate-300 mb-1.5">
+              Work Email Address <span class="text-cyan-400">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              required 
+              placeholder="you@company.com" 
+              class="w-full bg-[#0d121f] border border-white/[0.1] rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition"
+            />
+          </div>
+
+          <div>
+            <label for="goal" class="block text-xs font-semibold text-slate-300 mb-1.5">Primary Growth Focus</label>
+            <select 
+              id="goal" 
+              name="goal" 
+              class="w-full bg-[#0d121f] border border-white/[0.1] rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400 transition cursor-pointer"
+            >
+              <option value="Fix Technical Errors">Fix Technical Errors & Slow Speed</option>
+              <option value="Increase Organic Traffic">Increase Organic Traffic & Ranking</option>
+              <option value="Outrank Competitors">Outrank Specific Competitors</option>
+              <option value="Full Agency Management">Full Ongoing SEO Retainer</option>
+            </select>
+          </div>
+
+          <button 
+            type="submit" 
+            class="w-full relative group overflow-hidden bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-extrabold py-3.5 px-6 rounded-xl shadow-lg shadow-indigo-600/30 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-white/20 flex items-center justify-center gap-2 cursor-pointer"
+          >
+            <span>Generate Free Audit Report</span>
+            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </button>
+
+          <p class="text-[11px] text-center text-slate-400 pt-1">
+            🔒 100% Confidential. Your data is never sold or shared.
+          </p>
+        </form>
+      </div>
+    </div>
   </div>
-
-  <form action="https://api.web3forms.com/submit" method="POST" class="max-w-md mx-auto space-y-4">
-    <!-- Web3Forms Access Key (User can replace with their key) -->
-    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-    <input type="hidden" name="subject" value="New SEO Audit Request" />
-
-    <div>
-      <label for="url" class="block text-xs font-medium text-slate-300 mb-1">Website URL *</label>
-      <input 
-        type="url" 
-        id="url" 
-        name="url" 
-        required 
-        placeholder="https://yourwebsite.com" 
-        class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
-      />
-    </div>
-
-    <div>
-      <label for="email" class="block text-xs font-medium text-slate-300 mb-1">Work Email Address *</label>
-      <input 
-        type="email" 
-        id="email" 
-        name="email" 
-        required 
-        placeholder="you@company.com" 
-        class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
-      />
-    </div>
-
-    <div>
-      <label for="goal" class="block text-xs font-medium text-slate-300 mb-1">Primary Goal (Optional)</label>
-      <select 
-        id="goal" 
-        name="goal" 
-        class="w-full bg-slate-900 border border-slate-700 rounded-xl px-4 py-3 text-sm text-slate-300 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition"
-      >
-        <option value="Fix Technical Errors">Fix Technical Errors & Speed</option>
-        <option value="Increase Organic Traffic">Increase Organic Traffic</option>
-        <option value="Rank #1 for Keywords">Rank #1 for Targeted Keywords</option>
-        <option value="Full SEO Overhaul">Full SEO Overhaul</option>
-      </select>
-    </div>
-
-    <button 
-      type="submit" 
-      class="w-full bg-indigo-600 hover:bg-indigo-500 text-white font-bold py-3.5 px-6 rounded-xl shadow-lg shadow-indigo-600/30 transition hover:scale-[1.02] active:scale-[0.98]"
-    >
-      Request Free Audit →
-    </button>
-  </form>
 </div>

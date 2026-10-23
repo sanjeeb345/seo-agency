@@ -18,21 +18,39 @@ const {
 const siteName = "askaseo";
 const fullTitle = `${title} | ${siteName}`;
 
-// JSON-LD Schema for Organization
+// JSON-LD Schema for Organization & Founder
 const schemaData = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   "name": siteName,
-  "url": Astro.site ? Astro.site.href : "https://example.com",
+  "url": Astro.site ? Astro.site.href : "https://askaseo.com",
   "logo": new URL('/favicon.svg', Astro.url).href,
   "description": description,
   "priceRange": "$$$",
+  "email": "sanjeebchetri9999@gmail.com",
+  "telephone": "+91-73994-82520",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Guwahati",
+    "addressRegion": "Assam",
+    "addressCountry": "IN"
+  },
+  "founder": {
+    "@type": "Person",
+    "name": "Sanjeeb Kumar Chetri",
+    "jobTitle": "Senior SEO Specialist & Principal Search Strategist",
+    "url": "https://askaseo.com/about",
+    "sameAs": [
+      "https://linkedin.com/in/sanjeebchetri"
+    ]
+  },
   "serviceType": [
-    "Search Engine Optimization",
-    "Technical SEO Audit",
-    "On-Page SEO",
-    "Link Building",
-    "Local SEO"
+    "Technical SEO & Zero-Downtime Migrations",
+    "Google AI Overview & AEO/GEO Optimization",
+    "Semantic SEO & Topical Authority Architecture",
+    "International & Multilingual hreflang SEO",
+    "Server Log-File & N-Gram Analysis",
+    "JSON-LD Schema & AI Automation Workflows"
   ]
 };
 ---
